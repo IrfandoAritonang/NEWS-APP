@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".presentation.login.view.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivKemenaker"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimens_48dp"
+            android:src="@drawable/logo_kemenaker"
+            app:layout_constraintBottom_toTopOf="@+id/ivTc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/ivTc"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimens_240dp"
+            android:layout_marginTop="@dimen/dimens_56dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/logo_news2_rg"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivKemenaker"
+            android:animateLayoutChanges="true"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            app:layout_constraintEnd_toEndOf="@+id/ivTc"
+            app:layout_constraintStart_toStartOf="@+id/ivTc"
+            app:layout_constraintTop_toTopOf="@+id/guideline1"
+            app:startIconDrawable="@drawable/ic_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tilEmail"
+            android:hint="@string/password"
+            app:layout_constraintEnd_toEndOf="@+id/ivTc"
+            app:layout_constraintStart_toStartOf="@+id/ivTc"
+            app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_lock_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/btn_login"
+            app:layout_constraintBottom_toTopOf="@+id/ivTalenthub"
+            app:layout_constraintEnd_toEndOf="@id/tilPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/tilPassword"
+            app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+            app:layout_constraintVertical_bias="0.272" />
+
+        <ImageView
+            android:id="@+id/ivTalenthub"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_32dp"
+            android:layout_marginStart="@dimen/dimens_32dp"
+            android:layout_marginBottom="@dimen/dimens_16dp"
+            android:src="@drawable/logo_talenthub"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivPintar"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPintar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_32dp"
+            android:src="@drawable/logo_pintar"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTalenthub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivTalenthub"
+            app:layout_constraintTop_toTopOf="@+id/ivTalenthub" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

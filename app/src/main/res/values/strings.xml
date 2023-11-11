@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Fast News</string>
+    <string name="by_name">By irfandort3@gmail.com</string>
+    <string name="welcome">Welcome</string>
+
+    <string name="title_news">News</string>
+    <string name="title_news_detail">News Detail</string>
+    <string name="title_favorite">Favorite</string>
+
+    // Hint
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    // Button
+    <string name="btn_login">Login</string>
+
+    // Error Message
+    <string name="invalid_email">Invalid email</string>
+    <string name="invalid_password">Password minimum 8 character</string>
+    <string name="detail_error_title">Tidak ditemukan alamat sumber artikel</string>
+
+    <string name="menu_search">Search</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_logout">Logout</string>
+    <string name="todo">ini logonya</string>
+    <string name="share">Share</string>
+    <string name="sort_a_z">Sort A-Z</string>
+    <string name="refresh">Refresh</string>
+</resources>
